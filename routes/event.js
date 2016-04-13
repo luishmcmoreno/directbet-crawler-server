@@ -37,7 +37,7 @@ router.post('/:id', function (req, res) {
 			var eventTitle = $('#css3menu4 a').text().replace(/\s\s+/g, ' ').trim();
 			var bets = [];
 			var betTypes = $('#css3menu5').each(function () {
-				var type = $(this).find('.event-header').text().replace(/\s\s+/g, ' ').replace('LIVE !', '').trim();
+				var type = $(this).find('.event-header').text().replace(/\s\s+/g, ' ').trim().replace('LIVE', '').replace('!', '');
 				$(this).find('li.topmenu a').each(function () {
 					var bet = $(this).find('span').html();
 					bet = bet.split('@');
